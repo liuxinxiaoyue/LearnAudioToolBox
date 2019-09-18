@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1V-jc-6iH">
+                                <rect key="frame" x="40" y="373" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="9eY-A6-FLV"/>
+                                    <constraint firstAttribute="height" constant="30" id="qCb-pC-FRT"/>
+                                </constraints>
+                                <state key="normal" title="开始录音"/>
+                                <connections>
+                                    <action selector="beginRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqb-GO-EDR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmh-tu-2o8">
+                                <rect key="frame" x="284" y="373" width="90" height="30"/>
+                                <state key="normal" title="停止录音"/>
+                                <connections>
+                                    <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5RR-wF-dTx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CI-CU-GR6">
+                                <rect key="frame" x="40" y="493" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="MpV-tL-zpv"/>
+                                    <constraint firstAttribute="height" constant="30" id="lJZ-rD-EcO"/>
+                                </constraints>
+                                <state key="normal" title="开始播放"/>
+                                <connections>
+                                    <action selector="beginPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VFc-q6-cjd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAa-6x-iAc">
+                                <rect key="frame" x="284" y="493" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Lc9-LO-MVl"/>
+                                    <constraint firstAttribute="height" constant="30" id="Vxy-ze-Qb7"/>
+                                </constraints>
+                                <state key="normal" title="停止播放"/>
+                                <connections>
+                                    <action selector="stopPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rU8-za-Tam"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pmh-tu-2o8" firstAttribute="centerY" secondItem="L1V-jc-6iH" secondAttribute="centerY" id="1wW-88-P6l"/>
+                            <constraint firstItem="Pmh-tu-2o8" firstAttribute="height" secondItem="L1V-jc-6iH" secondAttribute="height" id="B8F-w8-fXz"/>
+                            <constraint firstItem="L1V-jc-6iH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="T3R-RU-DZH"/>
+                            <constraint firstItem="L1V-jc-6iH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ZBH-cL-GYP"/>
+                            <constraint firstItem="LAa-6x-iAc" firstAttribute="height" secondItem="Pmh-tu-2o8" secondAttribute="height" id="bK6-QD-UqG"/>
+                            <constraint firstItem="7CI-CU-GR6" firstAttribute="height" secondItem="L1V-jc-6iH" secondAttribute="height" id="eIx-UV-jsi"/>
+                            <constraint firstItem="LAa-6x-iAc" firstAttribute="trailing" secondItem="Pmh-tu-2o8" secondAttribute="trailing" id="gST-ii-8HW"/>
+                            <constraint firstItem="Pmh-tu-2o8" firstAttribute="width" secondItem="L1V-jc-6iH" secondAttribute="width" id="jNp-Wg-DQp"/>
+                            <constraint firstItem="7CI-CU-GR6" firstAttribute="leading" secondItem="L1V-jc-6iH" secondAttribute="leading" id="jbD-Ir-xda"/>
+                            <constraint firstItem="7CI-CU-GR6" firstAttribute="width" secondItem="L1V-jc-6iH" secondAttribute="width" id="kvB-ae-tY8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pmh-tu-2o8" secondAttribute="trailing" constant="40" id="p55-RC-eNc"/>
+                            <constraint firstItem="LAa-6x-iAc" firstAttribute="top" secondItem="7CI-CU-GR6" secondAttribute="top" id="sCc-kz-MjL"/>
+                            <constraint firstItem="LAa-6x-iAc" firstAttribute="width" secondItem="Pmh-tu-2o8" secondAttribute="width" id="u1u-AM-gtZ"/>
+                            <constraint firstItem="7CI-CU-GR6" firstAttribute="top" secondItem="L1V-jc-6iH" secondAttribute="bottom" constant="90" id="wIL-e5-U42"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
