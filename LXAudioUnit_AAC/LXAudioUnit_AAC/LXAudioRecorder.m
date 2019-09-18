@@ -157,6 +157,9 @@ OSStatus recordCallback(void *inRefCon, AudioUnitRenderActionFlags *ioActionFlag
 - (void)stop {
     AudioOutputUnitStop(ioUnit);
     [fileHandle closeFile];
+    AudioConverterDispose(converterUnit);
+    free(converterBufferList);
+    free(bufferList);
 }
 
 - (NSData*)adtsDataForPacketLength:(NSUInteger)packetLength {
